@@ -90,36 +90,6 @@ const config: Config = {
         },
       ],
     },
-    footer: {
-      style: 'dark',
-      links: [
-            {
-              label: 'Tutorial',
-              to: '/intro',
-            },
-            {
-              label: "Sprint 1",
-              to: "/sprint-1/intro"
-            },
-            {
-              label: "Sprint 2",
-              to: "/sprint-2/intro"
-            },
-            {
-              label: "Sprint 3",
-              to: "/sprint-3/intro"
-            },
-            {
-              label: "Sprint 4",
-              to: "/sprint-4/intro"
-            },
-            {
-              label: "Sprint 5",
-              to: "/sprint-5/intro"
-            },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Inteli. Built with Docusaurus.`,
-    },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
