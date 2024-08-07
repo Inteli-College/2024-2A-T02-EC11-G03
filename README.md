@@ -8,7 +8,9 @@
 
 ## Documentação do Projeto
 
-Em desenvolvimento
+Para acessar a documentação completa do nosso projeto, [clique aqui](https://inteli-college.github.io/2024-2A-T02-EC11-G03/).
+
+Ou acesse diretamente através do URL: [https://inteli-college.github.io/2024-2A-T02-EC11-G03/](https://inteli-college.github.io/2024-2A-T02-EC11-G03/)
 
 ## Grupo 3
 
