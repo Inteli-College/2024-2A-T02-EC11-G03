@@ -29,7 +29,7 @@ Além disso, a emissão de tokens de crédito de carbono, certificados pela Verr
 
 ## Responsabilidade social
 
-Este projeto visa plantar a maior quantidade possível de árvores, promovendo um impacto positivo e sustentável no meio ambiente e nas comunidades locais. Ao auxiliar no reflorestamento, o projeto contribui significativamente para o reaparecimento de espécies nativas, promovendo a biodiversidade e fortalecendo os ecossistemas locais. Esses esforços estão alinhados com os Objetivos de Desenvolvimento Sustentável (ODS), especialmente aqueles relacionados à vida terrestre e às ações climáticas.
+A Abundance visa plantar a maior quantidade possível de árvores, promovendo um impacto positivo e sustentável no meio ambiente e nas comunidades locais. Ao auxiliar no reflorestamento, o projeto contribui significativamente para o reaparecimento de espécies nativas, promovendo a biodiversidade e fortalecendo os ecossistemas locais. Esses esforços estão alinhados com os Objetivos de Desenvolvimento Sustentável (ODS), especialmente aqueles relacionados à vida terrestre e às ações climáticas.
 
 Além disso, o projeto tem como objetivo futuro identificar oportunidades bioeconômicas que possam beneficiar diretamente as comunidades locais. Por exemplo, ao identificar a presença de pimenta rosa na região, o projeto pode incentivar a coleta e a comercialização desse recurso natural, proporcionando uma fonte de renda sustentável para os moradores. Da mesma forma, a venda de eucalipto, quando pronto para corte, poderá ser incentivada como uma prática econômica que respeita o ciclo de cultivo e corte sustentável.
 
