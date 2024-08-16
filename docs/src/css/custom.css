@@ -31,13 +31,15 @@
 
 /* Tabelas */
 .custom-table {
-  width: 100%;
-  font-size: 24px; /* Aumenta o tamanho da fonte */
+  width: 1200px;
+  font-size: 18px; /* Aumenta o tamanho da fonte */
   border-collapse: collapse;
 }
 
 .custom-table th, .custom-table td {
-  padding: 20px; /* Aumenta o espaçamento dentro das células */
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px; /* Aumenta o espaçamento dentro das células */
   border: 2px solid #ddd; /* Bordas mais grossas para melhor visibilidade */
 }
 
