@@ -28,3 +28,26 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Tabelas */
+.custom-table {
+  width: 1200px;
+  font-size: 18px; /* Aumenta o tamanho da fonte */
+  border-collapse: collapse;
+}
+
+.custom-table th, .custom-table td {
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px; /* Aumenta o espaçamento dentro das células */
+  border: 2px solid #ddd; /* Bordas mais grossas para melhor visibilidade */
+}
+
+.custom-table th {
+  background-color: #f2f2f2;
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.custom-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alterna cores das linhas para melhor legibilidade */
+}
