@@ -12,7 +12,7 @@ Para acessar a documentação completa do nosso projeto, [clique aqui](https://i
 
 Ou acesse diretamente através do URL: [https://inteli-college.github.io/2024-2A-T02-EC11-G03/](https://inteli-college.github.io/2024-2A-T02-EC11-G03/)
 
-## Grupo 3
+## Deméter
 
 ## :student: Integrantes:
 - <a href="https://www.linkedin.com/in/felipe-hm-le%C3%A3o/">Felipe Leão</a> 
@@ -34,7 +34,7 @@ Ou acesse diretamente através do URL: [https://inteli-college.github.io/2024-2A
 
 ## 📝 Descrição
 
-Em desenvolvimento
+Este projeto desenvolve uma solução baseada em inteligência artificial para a contagem automática de árvores em imagens de satélites e drones. O sistema identifica e contabiliza as árvores em grandes áreas florestais, substituindo métodos manuais demorados e propensos a erros. A aplicação visa aumentar a precisão e a eficiência na gestão florestal, contribuindo diretamente para a conservação ambiental e a geração de créditos de carbono.
 
 ## 📁 Estrutura de Pastas
 
