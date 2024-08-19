@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'WeePlant',
+  title: 'Deméter',
   favicon: 'img/inteli.svg',
 
   // Set the production url of your site here
@@ -41,7 +41,7 @@ const config: Config = {
   themeConfig: {
     image: 'img/inteli.svg',
     navbar: {
-      title: 'WeePlant',
+      title: 'Deméter',
       logo: {
         alt: 'Inteli Logo',
         src: 'img/inteli.svg',
