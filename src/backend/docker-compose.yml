@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  backend:
+    image: demeter-api:latest
+    build:
+      context: .
+    container_name: demeter-api
+    ports:
+      - "8000:8000"
+    env_file: local.env
+    volumes:
+      - ./src:/app
+    command: sh -c "uvicorn app:app --host 0.0.0.0 --reload"
+    restart: on-failure
+
+  db:
+    build: ./database/.
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=my_user
+      - POSTGRES_PASSWORD=my_password
+      - POSTGRES_DB=my_db
+    ports:
+      - "5432:5432"
