@@ -1,3 +1,8 @@
+---
+title: Requisitos
+sidebar_position: 2
+--- 
+
 # Requisitos
 
 <table class="custom-table">

@@ -3,63 +3,23 @@ title: Introdução
 sidebar_position: 1
 slug: /
 ---
+
 <!-- Introdução -->
-<img src="https://i.redd.it/q0dd3k02unqb1.gif" alt="Boot process" style={{ display: 'block', marginLeft: 'auto', maxHeight: '30vh', marginRight: 'auto' }} />
+Este documento serve como a documentação oficial para o projeto de Contagem de Árvores Através de Imagens de Satélites/Drones desenvolvido em parceria com a Abundance Brasil. A documentação é um guia completo que abrange as diferentes etapas do desenvolvimento do projeto, desde a concepção e análise de negócios, passando pelo design de experiência do usuário (UX), até a implementação técnica e programação do sistema.
 
-## Contexto do Problema
+## Objetivo
+O objetivo principal desta documentação é fornecer uma visão abrangente e detalhada sobre cada fase do projeto, garantindo que todos os envolvidos - desenvolvedores, designers, gestores de projeto, e stakeholders - tenham um entendimento claro dos objetivos, métodos e resultados esperados. A documentação também funciona como um registro permanente do processo de desenvolvimento, facilitando a manutenção, evolução, e possíveis auditorias futuras.
 
-<img src="https://i.redd.it/q0dd3k02unqb1.gif" alt="Boot process" style={{ display: 'block', marginLeft: 'auto', maxHeight: '30vh', marginRight: 'auto' }} />
+## Estrutura da Documentação
 
-## Execução
+### Análise de Negócios:
+Nesta seção, são explorados os requisitos de negócio e os desafios enfrentados pela Abundance Brasil na contagem manual de árvores. Aborda-se a justificativa para a adoção de uma solução automatizada baseada em inteligência artificial e os benefícios esperados em termos de eficiência, precisão e impacto ambiental. Também inclui uma análise de viabilidade.
 
-A organização operacional do projeto deu-se a partir dos pilares postulados pelo método SCRUM. O projeto foi temporalizado através *sprints*, intervalos de tempo de duas semanas cada dedicados puramente ao desenvolvimento de determinado capítulo do projeto.
+### UX (User Experience):
+Esta parte da documentação foca na experiência do usuário, abordando como a interface da aplicação foi projetada para ser intuitiva e acessível, mesmo para usuários sem conhecimento técnico avançado. Inclui wireframes e uma análise de como o design da interface contribui para a usabilidade do sistema.
 
-### Sprint 1: Entendimento de negócios e Arquitetura inicial
+### Programação e Implementação Técnica:
+A seção de programação detalha as decisões técnicas tomadas ao longo do desenvolvimento do sistema. Descreve a arquitetura do software e as tecnologias utilizadas. Também inclui o código comentado e explicações sobre como o sistema foi treinado, validado e testado.
 
-<img src="https://i.redd.it/q0dd3k02unqb1.gif" alt="Boot process" style={{ display: 'block', marginLeft: 'auto', maxHeight: '30vh', marginRight: 'auto' }} />
-
-<!-- #### **Apresentação da primeira sprint review**
-
-[Acesse a apresentação aqui!!](../static/reviews/SPRINT%2001%20-%20GRUPO%202%20-%20M10.pdf)
-
-[Ou aqui para o link direto ao Canva](https://www.canva.com/design/DAGDbJxQZs8/m8QlQdloXF5hRO6SN1k2pw/view?utm_content=DAGDbJxQZs8&utm_campaign=designshare&utm_medium=link&utm_source=editor) -->
-
-### Sprint 2: Em processo
-
-<img src="https://i.redd.it/q0dd3k02unqb1.gif" alt="Boot process" style={{ display: 'block', marginLeft: 'auto', maxHeight: '30vh', marginRight: 'auto' }} />
-
-<!-- #### **Apresentação da segunda sprint review**
-
-[Acesse a apresentação aqui!!](../static/reviews/SPRINT%2002%20-%20GRUPO%202%20-%20M10.pdf)
-
-[Ou aqui para o link direto ao Canva](https://www.canva.com/design/DAGEpOlf4Dc/DUNxGVev4g_skPARg7t7Vw/view?utm_content=DAGEpOlf4Dc&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel) -->
-
-### Sprint 3: Em processo
-
-<img src="https://i.redd.it/q0dd3k02unqb1.gif" alt="Boot process" style={{ display: 'block', marginLeft: 'auto', maxHeight: '30vh', marginRight: 'auto' }} />
-
-<!-- #### **Apresentação da terceira sprint review**
-
-[Acesse a apresentação aqui!!](../static/reviews/SPRINT%2003%20-%20GRUPO%202%20-%20M10.pdf)
-
-[Ou aqui para o link direto ao Canva](https://www.canva.com/design/DAGGI_A8M3E/qo1E8Go0sUXf6uJoRcro-A/view?utm_content=DAGGI_A8M3E&utm_campaign=designshare&utm_medium=link&utm_source=editor) -->
-
-### Sprint 4:  Em processo
-
-<img src="https://i.redd.it/q0dd3k02unqb1.gif" alt="Boot process" style={{ display: 'block', marginLeft: 'auto', maxHeight: '30vh', marginRight: 'auto' }} />
-
-<!-- #### **Apresentação da quarta sprint review**
-
-[Acesse a apresentação aqui!!](../static/reviews/SPRINT%2004%20-%20GRUPO%202%20-%20M10.pdf)
-
-[Ou aqui para o link direto ao Canva](https://www.canva.com/design/DAGHc3aPOxo/f3lxHKV3tBaBIeXzomLYPQ/edit?utm_content=DAGHc3aPOxo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) -->
-
-### Sprint 5: Em processo
-
-<img src="https://i.redd.it/q0dd3k02unqb1.gif" alt="Boot process" style={{ display: 'block', marginLeft: 'auto', maxHeight: '30vh', marginRight: 'auto' }} />
-
-<!-- #### **Apresentação da terceira sprint review**
-
-[Acesse a apresentação aqui!!](../static/reviews/SPRINT%2005%20-%20GRUPO%202%20-%20M10.pdf)
-
-[Ou aqui para o link direto ao Canva](https://www.canva.com/design/DAGIrH-dG88/rJgAoNDaro-kajfzVEor9g/edit?utm_content=DAGIrH-dG88&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) -->
+## Importância da Documentação
+A documentação não apenas documenta o processo de desenvolvimento, mas também assegura que o projeto seja transparente e replicável. Ela permite que novos membros da equipe compreendam rapidamente o escopo e o andamento do projeto, e que as decisões de design e técnicas sejam revisadas e avaliadas. A documentação também serve como uma base para futuras melhorias e adaptações da solução, garantindo que a Abundance Brasil possa continuar a evoluir sua abordagem de conservação ambiental com o suporte da tecnologia.
