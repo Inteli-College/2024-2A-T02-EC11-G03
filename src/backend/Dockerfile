@@ -8,6 +8,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-EXPOSE 3000
+RUN prisma generate
 
-CMD ["python", "main.py"]
+RUN prisma migrate dev -n 'auto' --schema=./src/prisma/schema.prisma

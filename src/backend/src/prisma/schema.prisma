@@ -1,0 +1,42 @@
+generator client {
+    provider             = "prisma-client-py"
+    interface            = "asyncio"
+    recursive_type_depth = 5
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+enum Role {
+    ADMIN
+    DEFAULT_ROLE
+}
+
+enum UserStatus {
+    ACTIVE
+    DISABLED
+}
+
+model User {
+    id        Int        @id
+    key       String     @default(uuid())
+    name      String
+    email     String
+    password  String
+    role      Role[]     @default([DEFAULT_ROLE])
+    status    UserStatus @default(ACTIVE)
+    createdAt DateTime   @default(now())
+    updatedAt DateTime   @updatedAt
+
+    UserStatusEvent UserStatusEvent[]
+}
+
+model UserStatusEvent {
+    id        Int        @id
+    user      User       @relation(fields: [userid], references: [id])
+    userid    Int
+    status    UserStatus
+    createdAt DateTime   @updatedAt
+}
