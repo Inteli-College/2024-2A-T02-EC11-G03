@@ -3,6 +3,5 @@ title: Introdução da Sprint 2
 sidebar_position: 3
 ---
 
-
-
-<img src="https://i.redd.it/q0dd3k02unqb1.gif" alt="Boot process" style={{ display: 'block', marginLeft: 'auto', maxHeight: '30vh', marginRight: 'auto' }} />
+  <iframe loading="lazy" width="800" height="450" src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGPJfiKNsU&#x2F;AaJtTNK6t47naXz3ZNASow&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
