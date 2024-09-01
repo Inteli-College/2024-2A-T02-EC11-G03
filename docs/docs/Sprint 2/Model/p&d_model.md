@@ -19,7 +19,7 @@ O **Detect Tree** é um modelo de deep learning especializado na detecção de �
 O maior desafio do **Detect Tree** é sua falta de especificidade quanto à contagem exata de árvores, uma vez que ele fornece apenas uma classificação binária por pixel. Isso significa que ele não distingue entre diferentes tipos de vegetação ou contornos individuais de árvores. Contudo, o modelo pode ser integrado com outros métodos para criar filtros mais complexos ou gerar metadados úteis para treinar outros modelos mais avançados.
 
 **Imagens**:
-![Imagem Exemplo 1](link_para_imagem_1)
+![Imagem Exemplo 1](https://github.com/Inteli-College/2024-2A-T02-EC11-G03/blob/dev/docs/static/img/sprint-2/detect_tree.png?raw=true)
 
 ---
 
@@ -37,9 +37,9 @@ O maior desafio do **Detect Tree** é sua falta de especificidade quanto à cont
 Para maximizar a eficácia do **DeepForest**, é essencial realizar um fine-tuning do modelo com base nas imagens específicas que serão utilizadas em predições futuras. Esse ajuste fino ajuda a adaptar o modelo às variações de resolução, iluminação e vegetação específica de cada área de estudo, melhorando significativamente a precisão das detecções.
 
 **Imagens**:
-![Imagem Exemplo 1](link_para_imagem_1)
+![Imagem Exemplo 1](https://github.com/Inteli-College/2024-2A-T02-EC11-G03/blob/dev/docs/static/img/sprint-2/deep_forest.png?raw=true)
 
-### Google - Colab
+### Colab - Deep Forest
 - [Google Colab](https://colab.research.google.com/drive/1PPCKcU2zRY0LUlDblr4mxkztOLqHTBrp?usp=sharing)
 ---
 
@@ -57,4 +57,4 @@ O **DeepLabv3+** é um modelo de Segmentação Semântica, desenvolvido pelo Goo
 O principal desafio do **DeepLabv3+** é a necessidade de datasets de alta qualidade com máscaras de segmentação pré-definidas. A qualidade das segmentações depende diretamente da precisão e variedade das máscaras utilizadas para treinar o modelo. A criação e curadoria dessas máscaras podem ser trabalhosas, mas são cruciais para que o modelo atinja alta precisão em suas predições.
 
 **Imagens**:
-![Imagem Exemplo 1](link_para_imagem_1)
+![Imagem Exemplo 1](https://github.com/Inteli-College/2024-2A-T02-EC11-G03/blob/dev/docs/static/img/sprint-2/DeepLabv3+.png?raw=true)
