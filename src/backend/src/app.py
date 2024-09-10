@@ -2,8 +2,7 @@
 import os
 import uvicorn
 from typing import Optional
-from connectors.s3_bucket import upload_fileobj
-from fastapi import FastAPI, File, UploadFile, HTTPException, Body
+from fastapi import FastAPI, File, UploadFile, HTTPException
 
 app = FastAPI()
 
@@ -37,4 +36,4 @@ async def upload_image(image: UploadFile = File(...)):
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == '__main__':
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run(app, host="0.0.0.0", port=8000)

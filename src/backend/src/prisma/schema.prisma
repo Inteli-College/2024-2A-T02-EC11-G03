@@ -90,6 +90,7 @@ model Quarter {
     avaiable_trees      Int
     purchased_trees     Int
     dead_trees          Int
+    tree_types          String[]
     area                Float    @db.DoublePrecision
     address             Address  @relation(fields: [addressId], references: [id])
     scan                Scan     @relation(fields: [scanId], references: [id])

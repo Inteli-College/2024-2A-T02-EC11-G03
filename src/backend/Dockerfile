@@ -10,7 +10,8 @@ COPY . .
 
 RUN prisma generate
 
+# RUN prisma db push --schema=./src/prisma/schema.prisma
+
 EXPOSE 3000
 
 CMD ["python", "main.py"]
-# RUN prisma migrate dev -n 'auto' --schema=./src/prisma/schema.prisma
