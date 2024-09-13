@@ -10,7 +10,7 @@ services:
     env_file: .env
     volumes:
       - ./src:/app
-    command: sh -c "uvicorn app:app --host 0.0.0.0 --reload"
+    command: sh -c "prisma generate && prisma db push --schema=./prisma/schema.prisma && uvicorn app:app --host 0.0.0.0 --reload"
     restart: on-failure
     depends_on:
       - db

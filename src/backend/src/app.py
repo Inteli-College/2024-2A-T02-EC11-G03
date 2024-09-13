@@ -4,6 +4,8 @@ import uvicorn
 from typing import Optional
 from fastapi import FastAPI, File, UploadFile, HTTPException
 
+from controllers.user import router as users_router
+
 app = FastAPI()
 
 # Defina o diretório onde as imagens serão salvas
@@ -12,6 +14,8 @@ UPLOAD_DIRECTORY = "uploads/"
 # Certifique-se de que o diretório de uploads existe
 if not os.path.exists(UPLOAD_DIRECTORY):
     os.makedirs(UPLOAD_DIRECTORY)
+
+app.include_router(users_router)
 
 @app.get("/")
 def read_root():
