@@ -8,7 +8,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN prisma generate
+RUN prisma generate --schema=./src/prisma/schema.prisma
+
+RUN prisma migrate dev --name 'init' --schema=./src/prisma/schema.prisma
 
 # RUN prisma db push --schema=./src/prisma/schema.prisma
 

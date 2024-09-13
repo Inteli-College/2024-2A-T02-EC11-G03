@@ -1,4 +1,4 @@
-generator client {
+generator py {
     provider             = "prisma-client-py"
     interface            = "asyncio"
     recursive_type_depth = 5
@@ -22,19 +22,18 @@ enum UserStatus {
 }
 
 model User {
-    id        Int        @id
-    key       String     @unique @default(uuid())
-    name      String
-    email     String
-    password  String
-    role      Role[]     @default([DEFAULT_ROLE])
-    status    UserStatus @default(ACTIVE)
-    createdAt DateTime   @default(now())
-    updatedAt DateTime   @updatedAt
-
-    UserStatusEvent UserStatusEvent[]
-    Trade           Trade[]
-    UserTree        UserTree[]
+    id                 Int               @id
+    key                String            @unique @default(uuid())
+    name               String
+    email              String
+    password           String
+    role               Role[]            @default([DEFAULT_ROLE])
+    status             UserStatus        @default(ACTIVE)
+    createdAt          DateTime          @default(now())
+    updatedAt          DateTime          @updatedAt
+    user_status_events UserStatusEvent[]
+    trades             Trade[]
+    trees              UserTree[]
 }
 
 model UserStatusEvent {
