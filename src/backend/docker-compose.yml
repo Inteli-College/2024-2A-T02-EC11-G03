@@ -7,13 +7,15 @@ services:
     container_name: demeter-api
     ports:
       - "8000:8000"
-    env_file: .env
+    environment:
+      - DATABASE_URL=postgres://my_user:my_password@db:5432/my_db
     volumes:
       - ./src:/app
     command: sh -c "prisma generate && prisma db push --schema=./prisma/schema.prisma && uvicorn app:app --host 0.0.0.0 --reload"
     restart: on-failure
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
   db:
     build: ./database/.
@@ -24,3 +26,13 @@ services:
       - POSTGRES_DB=my_db
     ports:
       - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U my_user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
