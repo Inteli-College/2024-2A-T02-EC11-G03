@@ -1,6 +1,6 @@
 from fastapi import HTTPException
 from repositories.user import UserRepository
-
+from models.user import UserCreate, User  # Importando os modelos
 
 class UserController:
     def __init__(self) -> None:
@@ -44,3 +44,15 @@ class UserController:
             raise HTTPException(status_code=401, detail=str(e))
         except Exception as e:
             raise HTTPException(status_code=500, detail=str(e))
+
+
+async def create_user(user: UserCreate):
+    existing_user = await prisma.user.find_unique(
+        where={"email": user.email}
+    )
+
+    if existing_user:
+        raise HTTPException(status_code=400, detail="Email already registered")
+    
+    created_user = await prisma.user.create(data={"email": user.email, "name": user.name, "password": user.password})
+    return created_user
