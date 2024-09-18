@@ -1,10 +1,24 @@
 from pydantic import BaseModel
+from typing import Optional, List
+from enum import Enum
 
-# Modelo Pydantic para criação de usuários
+class Role(str, Enum):
+    ADMIN = "ADMIN"
+    BUSINESS = "BUSINESS"
+    CLIENT = "CLIENT"
+    DEFAULT_ROLE = "DEFAULT_ROLE"
+
 class UserCreate(BaseModel):
-    email: str
     name: str
-    password: str  # Se você planeja capturar a senha
+    email: str
+    password: str
+    role: List[str]
+
+from pydantic import BaseModel
+
+class LoginData(BaseModel):
+    email: str
+    password: str
 
 class User(BaseModel):
     id: int

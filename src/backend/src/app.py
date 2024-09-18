@@ -7,8 +7,6 @@ from routes import user_router
 from contextlib import asynccontextmanager
 from fastapi.middleware.cors import CORSMiddleware
 
-from controllers.user import router as users_router
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     from prisma import Prisma
@@ -36,8 +34,6 @@ UPLOAD_DIRECTORY = "uploads/"
 
 if not os.path.exists(UPLOAD_DIRECTORY):
     os.makedirs(UPLOAD_DIRECTORY)
-
-app.include_router(users_router)
 
 @app.get("/")
 def read_root():

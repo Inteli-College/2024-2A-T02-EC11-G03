@@ -42,13 +42,14 @@ class UserRepository:
                 }
             )
 
-            is_valid = self._verify_password(self, self.password, user.password) and user.status != UserStatus.DISABLED
+            # Verificação da senha
+            is_valid = self._verify_password(self.password, user.password) and user.status != UserStatus.DISABLED
 
             if is_valid:
                 return user
             else:
-                raise ValueError("InvalidPassword")
-
+                raise ValueError("Invalid password or user is disabled.")
+    
     async def create(self):
         async with self.database_connection():
             try:
