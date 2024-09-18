@@ -2,6 +2,11 @@
 title: Protótipo de Interface
 sidebar_position: 2
 ---
+:::note
+
+O protótipo, nesta sprint, foi pensado sob a perspectiva do usuário Abundance. A ideia é evoluir para que também seja possível a visualização do usuário cliente da Abundance.
+
+:::
 
 # Tela de Login
 ![Protótipo - Tela de Login](https://github.com/Inteli-College/2024-2A-T02-EC11-G03/blob/docs/prototype/docs/static/img/sprint-2/prototype/login.png)
@@ -21,26 +26,26 @@ A Tela de Login, portanto, não apenas garante a segurança dos dados sensíveis
 # Dashboard
 ![Protótipo - Dashboard](https://github.com/Inteli-College/2024-2A-T02-EC11-G03/blob/docs/prototype/docs/static/img/sprint-2/prototype/dash.png)
 
-O Dashboard, nesta sprint, foi pensado sob a perspectiva do usuário Abundance. A ideia é evoluir para que também seja possível a visualização do usuário cliente da Abundance.
 Ao entrar no sistema, o usuário é imediatamente direcionado ao Dashboard, a interface principal para monitoramento e controle. No Dashboard, ele encontra uma visão geral dos dados e indicadores mais importantes relacionados ao projeto, como a contagem de árvores, metas de plantio e variações temporais, conforme representado na imagem acima.
 
-## Principais Componentes Visíveis no Dashboard:
-**Contagem de Árvores:** Apresenta de forma gráfica o número total de árvores registradas no sistema, fornecendo uma visão clara do progresso de preservação e aumento da vegetação.
-**Metas de Plantio:** Um painel específico que exibe as metas e o status do plantio de árvores, ajudando o usuário a acompanhar o cumprimento dos objetivos estabelecidos.
-**Contagem Temporal:** Um gráfico que ilustra a evolução do número de árvores ao longo do tempo, permitindo uma análise das tendências.
-**Registro de Atividades:** Uma tabela detalhada que lista os principais registros no sistema, como IDs, datas, status e quantidades de árvores. Isso facilita a navegação pelos dados específicos e o acompanhamento de eventos importantes.
-**Imagens Recentes:** Exibe imagens atualizadas da floresta ou área monitorada, permitindo uma visão visual do progresso e do impacto das ações ambientais.
+Os principais componentes visíveis no Dashboard são:  
+**Contagem de Árvores:** Apresenta de forma gráfica o número total de árvores registradas no sistema, fornecendo uma visão clara do progresso de preservação e aumento da vegetação.  
+**Metas de Plantio:** Um painel específico que exibe as metas e o status do plantio de árvores, ajudando o usuário a acompanhar o cumprimento dos objetivos estabelecidos.  
+**Contagem Temporal:** Um gráfico que ilustra a evolução do número de árvores ao longo do tempo, permitindo uma análise das tendências.  
+**Registro de Atividades:** Uma tabela detalhada que lista os principais registros referentes a um processamento de imagem e inserção de metadados. Isso facilita a navegação pelos dados específicos e o acompanhamento de eventos importantes.  
+**Imagens Recentes:** Exibe imagens atualizadas da floresta ou área monitorada, permitindo uma visão visual do progresso e do impacto das ações ambientais.  
 
-## Importância do Dashboard para a Experiência do Usuário
-O Dashboard é fundamental para a experiência do usuário, pois centraliza todas as informações relevantes em uma interface intuitiva e acessível. Ele não apenas permite uma visão abrangente e em tempo real dos dados ambientais, mas também facilita a tomada de decisões ao apresentar métricas e insights de maneira clara e organizada.
-
-Alguns aspectos-chave do impacto do Dashboard na experiência do usuário incluem:
-
-Eficiência e Produtividade: Com dados cruciais à disposição logo na entrada do sistema, o usuário pode rapidamente acessar e interpretar as informações necessárias, economizando tempo e aumentando sua produtividade.
-Personalização: A estrutura modular permite que o Dashboard se adapte às necessidades do usuário, priorizando os dados mais relevantes para seu perfil de atuação.
-Clareza Visual: O uso de gráficos, tabelas e imagens proporciona uma interface amigável e de fácil interpretação, especialmente importante para usuários que precisam de informações rápidas e assertivas.
-Acompanhamento de Resultados: O painel dá ao usuário uma compreensão clara do progresso em termos de plantio, conservação e impacto ambiental, aumentando o engajamento e a sensação de controle sobre o projeto.
-Em resumo, o Dashboard é uma ferramenta essencial para transformar dados complexos em informações acionáveis, criando uma experiência centrada no usuário e direcionada para a eficiência.
+Com esses elementos, o usuário tem acesso a todas as informações importantes de forma rápida e organizada. O Dashboard centraliza dados essenciais, permitindo a tomada de decisões ágeis, com base em métricas claras. Ele também oferece personalização, ajustando-se ao perfil do usuário, e proporciona uma experiência visual intuitiva, com gráficos e tabelas fáceis de interpretar. Dessa forma, o Dashboard transforma dados complexos em insights práticos, melhorando a eficiência e o controle sobre o projeto.
 
 # Upload de Imagens
 ![Protótipo - Upload de Imagens](https://github.com/Inteli-College/2024-2A-T02-EC11-G03/blob/docs/prototype/docs/static/img/sprint-2/prototype/upload.png)
+
+Além do Dashboard, o usuário também pode acessar a tela de Upload de Imagens, onde é possível carregar uma imagem para análise e obter resultados em alguns segundos. A interface foi projetada para facilitar o envio de arquivos, oferecendo duas opções práticas: arrastar e soltar a imagem diretamente na área de upload ou selecioná-la manualmente no dispositivo.
+
+O diferencial dessa tela está na possibilidade de o usuário fornecer metadados que enriquecem o processo de análise. Esses dados adicionais permitem uma customização mais apurada dos resultados, aumentando a precisão das informações apresentadas. As principais categorias de metadados incluem:  
+**Condições Climáticas:** Informar se o clima no momento da captura da imagem estava ensolarado ou chuvoso.  
+**Espécie(s) de Árvores:** Detalhar as espécies presentes na imagem, o que melhora a acurácia da análise.  
+**Tipo de Terreno:** Indicar as características do terreno, auxiliando na contextualização dos dados.  
+**Comentários Adicionais:** Um campo aberto para observações extras que possam refinar ainda mais os resultados.  
+
+Essa abordagem não apenas facilita o upload, mas também valoriza a experiência do usuário ao permitir uma interação ativa e personalizada com o sistema. O preenchimento de metadados torna o processo mais envolvente, ao mesmo tempo que melhora a qualidade da análise gerada, especialmente em métricas como a redução de carbono e o impacto ambiental. Isso reforça a sensação de controle e participação do usuário, elevando a experiência para um nível mais sofisticado e informativo.
