@@ -9,7 +9,7 @@ O protótipo, nesta sprint, foi pensado sob a perspectiva do usuário Abundance.
 :::
 
 # Tela de Login
-![Protótipo - Tela de Login](https://github.com/Inteli-College/2024-2A-T02-EC11-G03/blob/docs/prototype/docs/static/img/sprint-2/prototype/login.png)
+![Protótipo - Tela de Login](/img/sprint-2/prototype/login.png)
 
 A primeira tela apresentada ao usuário no sistema é a Tela de Login, que desempenha um papel essencial tanto na segurança quanto na personalização da experiência. Como o sistema lida com informações específicas do usuário, como quantidade de ativos, valor dos ativos, dados da floresta (incluindo número de árvores e capacidade de captura de carbono), a implementação de um mecanismo de autenticação robusto é indispensável. A Tela de Login possibilita a gestão de permissões e autorizações, garantindo que cada usuário tenha acesso apenas às informações e funcionalidades apropriadas.
 
@@ -24,7 +24,7 @@ Ao focar na personalização, o sistema pode, por exemplo:
 A Tela de Login, portanto, não apenas garante a segurança dos dados sensíveis, mas também serve como o ponto de partida para uma experiência rica e ajustada às necessidades do usuário, aumentando o engajamento e a eficiência do uso do sistema.
 
 # Dashboard
-![Protótipo - Dashboard](https://github.com/Inteli-College/2024-2A-T02-EC11-G03/blob/docs/prototype/docs/static/img/sprint-2/prototype/dash.png)
+![Protótipo - Dashboard](/img/sprint-2/prototype/dash.png)
 
 Ao entrar no sistema, o usuário é imediatamente direcionado ao Dashboard, a interface principal para monitoramento e controle. No Dashboard, ele encontra uma visão geral dos dados e indicadores mais importantes relacionados ao projeto, como a contagem de árvores, metas de plantio e variações temporais, conforme representado na imagem acima.
 
@@ -38,7 +38,7 @@ Os principais componentes visíveis no Dashboard são:
 Com esses elementos, o usuário tem acesso a todas as informações importantes de forma rápida e organizada. O Dashboard centraliza dados essenciais, permitindo a tomada de decisões ágeis, com base em métricas claras. Ele também oferece personalização, ajustando-se ao perfil do usuário, e proporciona uma experiência visual intuitiva, com gráficos e tabelas fáceis de interpretar. Dessa forma, o Dashboard transforma dados complexos em insights práticos, melhorando a eficiência e o controle sobre o projeto.
 
 # Upload de Imagens
-![Protótipo - Upload de Imagens](https://github.com/Inteli-College/2024-2A-T02-EC11-G03/blob/docs/prototype/docs/static/img/sprint-2/prototype/upload.png)
+![Protótipo - Upload de Imagens](/img/sprint-2/prototype/upload.png)
 
 Além do Dashboard, o usuário também pode acessar a tela de Upload de Imagens, onde é possível carregar uma imagem para análise e obter resultados em alguns segundos. A interface foi projetada para facilitar o envio de arquivos, oferecendo duas opções práticas: arrastar e soltar a imagem diretamente na área de upload ou selecioná-la manualmente no dispositivo.
 
