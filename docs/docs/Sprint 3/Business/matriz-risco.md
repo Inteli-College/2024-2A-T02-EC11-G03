@@ -67,4 +67,4 @@ Implementar uma fase de testes rigorosa com simulações de diferentes cenários
 
 A seguir, apresenta-se uma matriz que cruza o nível de impacto com a probabilidade de ocorrência do risco:
 
-
+![Matriz de risco](https://github.com/user-attachments/assets/7bc35379-4a88-4b13-8fab-c330317e2656)
