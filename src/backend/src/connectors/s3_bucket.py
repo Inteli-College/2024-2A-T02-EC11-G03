@@ -4,34 +4,27 @@ from fastapi import File
 import boto3
 from botocore.exceptions import ClientError
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
-def upload_file(file_name, bucket, object_name=None):
+# Configuração do cliente S3
+s3_client = boto3.client(
+    's3',
+    aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID'),
+    aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY'),
+    region_name=os.getenv('AWS_REGION')
+)
 
-    if object_name is None:
-        object_name = os.path.basename(file_name)
+def upload(file_name, file_content, image):
+    s3_client.put_object(
+            Bucket=os.getenv('BUCKET_NAME'),
+            Key=file_name,
+            Body=file_content,
+            ContentType=image.content_type
+        )
 
-    s3_client = boto3.client("s3")
-    try:
-        response = s3_client.upload_file(file_name, bucket, object_name)
-        logging.info(response)
-    except ClientError as e:
-        logging.error(e)
-        return False
-    return True
+        # Retorna a URL pública do arquivo
+    file_url = f"https://{os.getenv('BUCKET_NAME')}.s3.amazonaws.com/{file_name}"
+    return file_url
 
-
-def upload_fileobj(file: File, bucket, object_name=None):
-
-    if object_name is None:
-        object_name = os.path.basename(file.name)
-
-    s3_client = boto3.client("s3")
-    try:
-        with open(file, "rb") as f:
-            response = s3_client.upload_fileobj(f, bucket, object_name)
-            logging.info(response)
-    except ClientError as e:
-        logging.error(e)
-        return False
-    return True
