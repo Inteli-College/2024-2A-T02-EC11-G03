@@ -44,7 +44,10 @@ export default function TimelineContent() {
       <h2 className="text-5xl text-gray-600 font-bold mb-3">
         Escolha a Floresta
       </h2>
-
+      <p style={{marginBottom:20}}>
+        Selecione uma floresta para ver a linha do tempo de plantio e as
+        imagens de satélite.
+      </p>
       {/* Filtro de Florestas */}
       <div className="mb-8">
         <select
