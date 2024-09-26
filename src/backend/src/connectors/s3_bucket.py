@@ -1,5 +1,3 @@
-import logging
-
 from fastapi import File
 import boto3
 from botocore.exceptions import ClientError

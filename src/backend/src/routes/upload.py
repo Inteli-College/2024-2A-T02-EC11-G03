@@ -1,9 +1,11 @@
 from fastapi import APIRouter, File, UploadFile, HTTPException
 import connectors.s3_bucket as s3
+from models.upload import Registry
+from controllers.upload import UploadController
 
 router = APIRouter(prefix="/upload", tags=["upload"])
 
-@router.post("/")
+@router.post("/image")
 async def upload_image(image: UploadFile = File(...)):
     try:
     
@@ -17,3 +19,8 @@ async def upload_image(image: UploadFile = File(...)):
         return file_url
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+@router.post("/")
+async def add_registry(registry: Registry):
+    controller = UploadController()
+    return await controller.create(registry)

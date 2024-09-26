@@ -4,7 +4,6 @@ from models.user import UserCreate, LoginData  # Certifique-se de que o caminho 
 
 router = APIRouter(prefix="/user", tags=["user"])
 
-
 @router.get("/{key}")
 async def get_by_key(key: str):
     controller = UserController()
