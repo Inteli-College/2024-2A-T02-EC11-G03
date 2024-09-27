@@ -1,4 +1,4 @@
-from fastapi import File
+from fastapi import UploadFile
 import boto3
 from botocore.exceptions import ClientError
 import os
@@ -14,15 +14,20 @@ s3_client = boto3.client(
     region_name=os.getenv('AWS_REGION')
 )
 
-def upload(file_name, file_content, image):
-    s3_client.put_object(
+folder_name = 'uploads/'
+
+def upload(file_name: str, file_content: bytes, image: UploadFile):
+    try:
+        # Faz o upload do arquivo para o S3
+        s3_client.put_object(
             Bucket=os.getenv('BUCKET_NAME'),
-            Key=file_name,
-            Body=file_content,
-            ContentType=image.content_type
-        )
+            Key=f"{folder_name}{file_name}",
+            Body=file_content,  # Garante que o conteúdo seja bytes
+            ContentType=image.content_type,  # O tipo de conteúdo é importante
+           )
 
         # Retorna a URL pública do arquivo
-    file_url = f"https://{os.getenv('BUCKET_NAME')}.s3.amazonaws.com/{file_name}"
-    return file_url
-
+        file_url = f"https://{os.getenv('BUCKET_NAME')}.s3.amazonaws.com/{file_name}"
+        return file_url
+    except ClientError as e:
+        raise Exception(f"Erro no upload para o S3: {str(e)}")

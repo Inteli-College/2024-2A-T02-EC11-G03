@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Doughnut, Bar, Line } from 'react-chartjs-2';
 import 'chart.js/auto';
+
+
 export default function DashboardContent() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // Estado para controlar a imagem atual
   const [userName, setUserName] = useState(''); // Estado para armazenar o nome do usuário
@@ -146,7 +148,7 @@ export default function DashboardContent() {
             <img
               src={images[currentImageIndex]}
               alt={`Imagem ${currentImageIndex + 1}`}
-              className="w-32 h-32 object-cover rounded-lg"
+              className="w-100 h-64 object-cover rounded-lg"
             />
             <button onClick={handleNext} className="ml-4 p-2 bg-gray-200 rounded">
               &#8594;
