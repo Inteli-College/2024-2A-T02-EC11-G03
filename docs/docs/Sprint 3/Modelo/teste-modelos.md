@@ -20,16 +20,16 @@ sidebar_position: 1
 ## Tratamento da matriz
 - Para a criação do arquivo .csv, foi utilizado um tratamento para agrupar os pontos em que o Detectree identificou como árvore e, através do uso de um número arbitrário, foi criado um parâmetro para a definição de x e y máximos e mínimos para aquele agrupamento de pontos, gerando assim uma linha referente à posição de uma possível árvore na imagem. Após esse tratamento, é gerado um .csv com várias linhas referentes às coordenadas dos pixels em que existe uma árvore naquela imagem.
 
-## Retreinameto do Deep Forest 
+## Retreinamento do Deep Forest 
 - Por fim, foi criado um novo trainer para o Deep Forest utilizando como entrada o .csv gerado e, após 10 épocas de treinamento, foi notável a melhoria nas classificações do modelo em relação ao que é uma árvore individualmente.
 
-### Imangens sem o retreinamento com saida do Detec Tree
+### Imangens sem o retreinamento com saida do Detectree
 ![Imagem de resultado Deep forest sem tratamento](../../../static/img/sprint-3/modelo/imagem-semdt.jpeg)
 
 
 ![Imagem de resultado Deep forest sem tratamento](../../../static/img/sprint-3/modelo/imagem2-semdt.jpeg)
 
-### Imangens com o retreinamento com saida do Detec Tree
+### Imangens com o retreinamento com saida do Detectree
 
 ![Imagem de resultado Deep forest com tratamento](../../../static/img/sprint-3/modelo/imagem-posdt1.jpeg)
 
