@@ -14,7 +14,9 @@ export default function Layout() {
       {/* Menu à esquerda fixo */}
       <div className="bg-[#242424] w-1/6 flex flex-col fixed h-full">
         <div className="flex justify-center my-8">
-          <img src="/logo.png" alt="Logo da Empresa" className="w-40 h-auto" />
+          <a href="https://abundancebrasil.com/" target="_blank" rel="noopener noreferrer">
+            <img src="/logo.png" alt="Logo da Empresa" className="w-40 h-auto" />
+          </a>
         </div>
         <div className="flex flex-col space-y-4 py-12 border-t border-b border-white">
           
