@@ -1,4 +1,3 @@
-version: "3.7"
 services:
   backend:
     image: demeter-api:latest
