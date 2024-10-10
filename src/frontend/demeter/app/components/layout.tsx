@@ -1,14 +1,20 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useContext, createContext } from 'react';
 import DashboardContent from '../components/dashboard';
 import UploadContent from '../components/upload';
 import TimelineContent from '../components/timeline';
 import FollowupContent from '../components/followup';
+import Calculator from '../components/calculator';
+import { UploadContext } from './context/TreeContext';
 
 export default function Layout() {
-  const [activeTab, setActiveTab] = useState('dashboard');
+// Criação do context
+const useUpload = () => useContext(UploadContext);
+const [upload, setUpload] = useState<any[]>([]);
 
+  const [activeTab, setActiveTab] = useState('dashboard');
+  
   return (
     <div className="flex min-h-screen">
       {/* Menu à esquerda fixo */}
@@ -64,6 +70,17 @@ export default function Layout() {
 
             Linha do Tempo
           </button>
+          <button
+            onClick={() => setActiveTab('calculator')}
+            className={`${activeTab === 'calculator' ? 'font-bold' : 'font-normal'
+              } text-white text-lg flex items-center hover:underline pl-6`}
+          >
+            <svg style={{ marginRight: 10 }} className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M4 4.5V19a1 1 0 0 0 1 1h15M7 14l4-4 4 4 5-5m0 0h-3.207M20 9v3.207" />
+            </svg>
+
+            Calculadora - CO
+          </button>
         </div>
 
         <div className="flex flex-col space-y-4">
@@ -78,12 +95,15 @@ export default function Layout() {
       </div>
 
       {/* Conteúdo principal dinâmico */}
+      <UploadContext.Provider value={[upload, setUpload]}>
       <div className="w-5/6 ml-[16.666%] p-8 bg-white">
         {activeTab === 'followup' && <FollowupContent />}
         {activeTab === 'dashboard' && <DashboardContent />}
         {activeTab === 'upload' && <UploadContent />}
         {activeTab === 'timeline' && <TimelineContent />}
+        {activeTab === 'calculator' && <Calculator />}
       </div>
+      </UploadContext.Provider>
     </div>
   );
 }
