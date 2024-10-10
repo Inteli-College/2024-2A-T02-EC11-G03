@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { Doughnut, Bar, Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 
-
 export default function DashboardContent() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // Estado para controlar a imagem atual
   const [userName, setUserName] = useState(''); // Estado para armazenar o nome do usuário
+
   // Carregar o nome do usuário quando o componente for montado
   useEffect(() => {
     const storedName = localStorage.getItem('userName');
@@ -13,20 +13,34 @@ export default function DashboardContent() {
       setUserName(storedName);
     }
   }, []);
+
   const images = ['/image1.jpeg', '/image2.jpg', '/image3.jpg']; // Array com as imagens do carrossel
+
   const handlePrevious = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
+
   const handleNext = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
+
   const handleImageClick = () => {
     window.open('/image1.jpeg', '_blank'); // Abre a imagem em uma nova aba
   };
+
+  // Mock de dados para a tabela
+  const registros = [
+    { id: '001', data: '01/09/2024', arvores: 50, imagem: '/upload.png' },
+    { id: '002', data: '02/09/2024', arvores: 100, imagem: '/upload.png' },
+    { id: '003', data: '03/09/2024', arvores: 75, imagem: '/upload.png' },
+    { id: '004', data: '04/09/2024', arvores: 120, imagem: '/upload.png' },
+    { id: '005', data: '05/09/2024', arvores: 90, imagem: '/upload.png' },
+  ];
+
   // Dados e configurações dos gráficos
   const doughnutData = {
     labels: ['Vivas', 'Mortas'],
@@ -37,10 +51,12 @@ export default function DashboardContent() {
       },
     ],
   };
+
   const doughnutOptions = {
     maintainAspectRatio: false, // Permite ajustar a proporção do gráfico
     aspectRatio: 1, // Define a proporção (1:1)
   };
+
   const barData = {
     labels: ['X', 'Y', 'Z'],
     datasets: [
@@ -51,6 +67,7 @@ export default function DashboardContent() {
       },
     ],
   };
+
   const barOptions = {
     indexAxis: 'y' as const, // Tipagem explícita como 'y'
     scales: {
@@ -59,6 +76,7 @@ export default function DashboardContent() {
       },
     },
   };
+
   const lineData = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr'],
     datasets: [
@@ -70,6 +88,7 @@ export default function DashboardContent() {
       },
     ],
   };
+
   return (
     <div className="p-4">
       <h2 className="text-5xl text-gray-600 font-bold mb-3">
@@ -78,6 +97,7 @@ export default function DashboardContent() {
       <p className="text-lg mb-8 text-gray-600">
         Monitore o impacto ambiental e explore as atualizações mais recentes da Abundance aqui
       </p>
+
       {/* Cards superiores com gráficos */}
       <div className="grid grid-cols-3 gap-12 mb-8">
         {/* Card gráfico de rosquinha */}
@@ -87,6 +107,7 @@ export default function DashboardContent() {
             <Doughnut data={doughnutData} options={doughnutOptions} />
           </div>
         </div>
+
         {/* Card gráfico de barras horizontais */}
         <div className="bg-white p-4 shadow-lg rounded-lg">
           <h3 className="text-xl text-center font-bold mb-4">Metas de Plantio</h3>
@@ -94,6 +115,7 @@ export default function DashboardContent() {
             <Bar data={barData} options={barOptions} />
           </div>
         </div>
+
         {/* Card gráfico de linha */}
         <div className="bg-white p-4 shadow-lg rounded-lg">
           <h3 className="text-xl text-center font-bold mb-4">Contagem Temporal</h3>
@@ -102,6 +124,7 @@ export default function DashboardContent() {
           </div>
         </div>
       </div>
+
       {/* Parte inferior com tabela e carrossel */}
       <div className="grid grid-cols-3 gap-4">
         {/* Tabela de registros */}
@@ -117,22 +140,25 @@ export default function DashboardContent() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td className="border px-4 py-2">001</td>
-                <td className="border px-4 py-2">01/09/2024</td>
-                <td className="border px-4 py-2">50</td>
-                <td className="border px-4 py-2 flex justify-center">
-                  <button
-                    className="py-1 px-5 bg-gradient-to-r from-[#009606] to-[#76C115] text-white rounded-xl hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-green-500"
-                    onClick={handleImageClick}
-                  >
-                    <img src="/upload.png" alt="Imagem" className="w-6 h-6" />
-                  </button>
-                </td>
-              </tr>
+              {registros.map((registro) => (
+                <tr key={registro.id}>
+                  <td className="border px-4 py-2">{registro.id}</td>
+                  <td className="border px-4 py-2">{registro.data}</td>
+                  <td className="border px-4 py-2">{registro.arvores}</td>
+                  <td className="border px-4 py-2 flex justify-center">
+                    <button
+                      className="py-1 px-5 bg-gradient-to-r from-[#009606] to-[#76C115] text-white rounded-xl hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-green-500"
+                      onClick={handleImageClick}
+                    >
+                      <img src={registro.imagem} alt="Imagem" className="w-6 h-6" />
+                    </button>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
+
         {/* Carrossel de imagens */}
         <div className="bg-white p-4 rounded-lg">
           <div className="flex justify-between items-center mb-4">
