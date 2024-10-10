@@ -1,0 +1,111 @@
+generator py {
+    provider             = "prisma-client-py"
+    interface            = "asyncio"
+    recursive_type_depth = 5
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+enum Role {
+    ADMIN
+    BUSINESS
+    CLIENT
+    DEFAULT_ROLE
+}
+
+enum UserStatus {
+    ACTIVE
+    DISABLED
+}
+
+model User {
+    id                 Int               @id @default(autoincrement())
+    key                String            @unique @default(uuid())
+    name               String
+    email              String
+    password           String
+    role               Role[]            @default([DEFAULT_ROLE])
+    status             UserStatus        @default(ACTIVE)
+    createdAt          DateTime          @default(now())
+    updatedAt          DateTime          @updatedAt
+    user_status_events UserStatusEvent[]
+    trades             Trade[]
+    trees              UserTree[]
+}
+
+model UserStatusEvent {
+    id        Int        @id
+    user      User       @relation(fields: [userid], references: [id])
+    userid    Int
+    status    UserStatus
+    createdAt DateTime   @default(now())
+}
+
+model UserTree {
+    id      Int   @id
+    user    User  @relation(fields: [userId], references: [id])
+    userId  Int
+    trade   Trade @relation(fields: [tradeId], references: [id])
+    tradeId Int
+
+    name        String
+    carbon_save Float  @db.DoublePrecision
+
+    updatedAt DateTime @updatedAt
+    createdAt DateTime @default(now())
+}
+
+model Trade {
+    id        Int        @id
+    key       String     @unique @default(uuid())
+    quarter   Quarter    @relation(fields: [quarterId], references: [id])
+    quarterId Int
+    trees     Int
+    User      User       @relation(fields: [userId], references: [id])
+    userId    Int
+    UserTree  UserTree[]
+    createdAt DateTime   @default(now())
+}
+
+model Address {
+    id           Int       @id
+    postal_code  String
+    neighborhood String
+    city         String
+    state        String
+    complement   String
+    Quarter      Quarter[]
+}
+
+model Quarter {
+    id                  Int      @id
+    key                 String   @unique @default(uuid())
+    image_url           String
+    processed_image_url String
+    number_of_trees     Int
+    avaiable_trees      Int
+    purchased_trees     Int
+    dead_trees          Int
+    tree_types          String[]
+    area                Float    @db.DoublePrecision
+    address             Address  @relation(fields: [addressId], references: [id])
+    scan                Scan     @relation(fields: [scanId], references: [id])
+    scanId              Int
+    addressId           Int
+    Trade               Trade[]
+    updatedAt           DateTime @updatedAt
+    createdAt           DateTime @default(now())
+}
+
+model Scan {
+    id              Int       @id
+    key             String    @unique @default(uuid())
+    scan_data       Json
+    number_of_trees Int
+    dead_trees      Int
+    Quarter         Quarter[]
+    createdAt       DateTime  @default(now())
+}

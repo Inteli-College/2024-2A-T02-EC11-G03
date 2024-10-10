@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+  backend:
+    image: demeter-api:latest
+    build:
+      context: .
+    container_name: demeter-api
+    ports:
+      - "8000:8000"
+    env_file: .env
+    volumes:
+      - ./src:/app
+    command: sh -c "prisma generate && prisma db push --schema=./prisma/schema.prisma && uvicorn app:app --host 0.0.0.0 --reload"
+    restart: on-failure
+    depends_on:
+      - db
+
+  db:
+    build: ./database/.
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=my_user
+      - POSTGRES_PASSWORD=my_password
+      - POSTGRES_DB=my_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
