@@ -1,0 +1,5 @@
+fastapi==0.95.2
+uvicorn==0.22.0
+pillow==9.3.0  
+torch==2.0.1  
+deepforest==1.0.6  
