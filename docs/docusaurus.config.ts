@@ -77,12 +77,12 @@ const config: Config = {
           position: "left",
           label: "Sprint 4",
         },
-        // {
-        //   type: "docSidebar",
-        //   sidebarId: "sprint5Side",
-        //   position: "left",
-        //   label: "Sprint 5",
-        // },
+        {
+          type: "docSidebar",
+          sidebarId: "sprint5Side",
+          position: "left",
+          label: "Sprint 5",
+        },
         {
           href: "https://github.com/Inteli-College/2024-2A-T02-EC11-G03/",
           label: "GitHub",
