@@ -1,0 +1,5 @@
+detectree
+DeepForest
+matplotlib
+rasterio
+numpy
