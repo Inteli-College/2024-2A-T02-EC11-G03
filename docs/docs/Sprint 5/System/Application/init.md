@@ -79,7 +79,7 @@ Com estas funcionalidades, a aplicação oferece:
 ## Tecnologias Utilizadas
 
 - **Front-end**: Next.js, React, TailwindCSS
-- **Back-end**: [Especificar tecnologias, por exemplo, Node.js, Express, etc.]
+- **Back-end**: FastAPI e Prisma.js (ORM) para conexão com banco em Postgres.
 - **Integração**: APIs de terceiros para mapas, serviços de blockchain, etc.
 - **Processamento de Imagens**: Algoritmos de visão computacional para detecção e contagem de árvores.
 
