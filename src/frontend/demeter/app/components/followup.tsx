@@ -13,9 +13,9 @@ export default function FollowUpContent() {
   // Dados das florestas (substitua pelos dados reais)
 
   const forests = [
-    { id: 1, title: 'Floresta da Tijuca', location: 'Rio de Janeiro', treeCount: 5000, image: '/amazonia15.jpeg', latitude: -3.4653, longitude: -62.2159, carbono: '1000 toneladas' },
-    { id: 2, title: 'Floresta de Pedra Branca', location: 'Rio de Janeiro', treeCount: 3000, image: '/amazonia16.jpeg', latitude: 48.2077, longitude: 8.2097, carbono: '5000 toneladas' },
-    { id: 3, title: 'Floresta Nacional de Ipanema', location: 'São Paulo', treeCount: 7000, image: '/amazonia17.jpeg', latitude: 0.7893, longitude: 113.9213, carbono: '2000 toneladas' },
+    { id: 1, title: 'Aurora Verde 1', location: 'Rio de Janeiro', treeCount: 5000, image: '/amazonia15.jpeg', latitude:-21.0483, longitude:-45.2723, carbono: '1000 toneladas' },
+    { id: 2, title: 'Aurora Verde 2', location: 'Rio de Janeiro', treeCount: 3000, image: '/amazonia16.jpeg', latitude: -21.0427, longitude: -45.2623, carbono: '5000 toneladas' },
+    { id: 3, title: 'VerdeAzul', location: 'São Paulo', treeCount: 7000, image: '/amazonia17.jpeg', latitude: -21.1259, longitude: -45.0376, carbono: '2000 toneladas' },
     // Adicione mais florestas conforme necessário
   ];
 
