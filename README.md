@@ -6,12 +6,6 @@
 
 # Sistema em edge computing
 
-## Documentação do Projeto
-
-Para acessar a documentação completa do nosso projeto, [clique aqui](https://inteli-college.github.io/2024-2A-T02-EC11-G03/).
-
-Ou acesse diretamente através do URL: [https://inteli-college.github.io/2024-2A-T02-EC11-G03/](https://inteli-college.github.io/2024-2A-T02-EC11-G03/)
-
 ## Deméter
 
 ## :student: Integrantes:
@@ -48,4 +42,4 @@ A estrutura acima é projetada para manter o projeto organizado e fácil de nave
 
 ## 📋 Licença/License
 
-<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Inteli-College/2024-2A-T02-EC11-G03">Inteli</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>. <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"></p>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Demeter</span> by <span property="cc:attributionName">Felipe Leão, Gabriela Rodrigues Matias, Giovanna Rodrigues, Gustavo Francisco, Mihaell Alves, Lucas Sales, Vitor Zeferino</span> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
